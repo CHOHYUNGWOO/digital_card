@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털 명함</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card-container">
+        <div class="business-card">
+            <!-- 프로필 섹션 -->
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA3MTVfNjEg%2FMDAxNTYzMTQ5MzkzNzMy.JvR4JK0k4r4xIRLhn1IMKj2vDcGoZkB_G6RK0_mPvK4g.vzxXs60OB0bW1eVj5k1_fdtYbUOUEGbD7p6X0znSsjog.PNG.cogram%2Fmercedes_0.png&type=sc960_832" alt="프로필 사진" id="profile-img">
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">H.W.Cho │ 조형우 <span class="title">과장</span></h1>
+                    <p class="position">세일즈 컨설턴트 │ 고양 전시장 영업부</p>
+                    <p class="company">메르세데스-벤츠 코리아 공식딜러 (주)모터원</p>
+                </div>
+            </div>
+
+            <!-- 연락처 섹션 -->
+            <div class="contact-section">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:010-9269-9278">010-9269-9278</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>hyung-woo.cho@motorone.co.kr</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://map.naver.com/v5/search/경기도%20고양시%20덕양구%20의장로110%20도내동%20고양전시장" target="_blank">경기도 고양시 덕양구 의장로110(도내동) 고양전시장</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://www.motorone.co.kr" target="_blank">www.motorone.co.kr</a>
+                </div>
+            </div>
+
+            <!-- 자기소개 섹션 -->
+            <div class="bio-section">
+                <h3>C-sales master 조형우입니다.</h3>
+                <div class="bio-content">
+                    <p class="bio-title">C-sales master란?</p>
+                    <p class="bio-description">메르세데스-벤츠의 영업사원 중에서도 별도의 조건을 충족해야하며,<br>
+독일 본사의 인증 평가를 통과한 소수의 영업사원에게만 주어지는 자격입니다.<br>
+2013년도 부터 수입차 판매를 시작하였으며 메르세데스 벤츠 공식딜러로<br>
+2016년부터 8년간 근무하고 있습니다.<br><br>
+항상 고객님들의 입장에서 생각할 수 있는 공식딜러가 되도록 노력하겠습니다.<br>
+찾아주셔서 감사합니다.</p>
+                </div>
+            </div>
+
+            <!-- 소셜 미디어 섹션 -->
+            <div class="social-section">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/hyungwoo9278/" target="_blank" class="social-link">
+                        <img src="https://i.namu.wiki/i/PpCUHjc8PoAlAWoSip-m3KtgYMq7Ft1sI2BiCioMrclYCFdnjCEVKdPyXJ3yqXgHjgboqOp-8Q9z71WTisQy_A.svg" alt="인스타그램" class="instagram-icon">
+                    </a>
+                    <a href="https://blog.naver.com/benz9278" target="_blank" class="social-link">
+                        <img src="https://i.namu.wiki/i/QWVJJqQ2U_KE1A1BkDI5WwhFcIeQ4C9uGIgibUWPHr3ev65fv4JW9_Yd-66EVu_0TF8mMXIh9k_dnrv_DlLBCw.svg" alt="네이버 블로그" class="blog-icon">
+                    </a>
+                    <a href="https://open.kakao.com/o/sHPCCx8e" target="_blank" class="social-link">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfeANA8NkxzhS8gUJE9oYfkzlcUjT6p5VBg&s" alt="카카오톡" class="kakao-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 간단한 상호작용 효과
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.querySelector('.business-card');
+            
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html> 

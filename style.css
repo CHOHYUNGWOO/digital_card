@@ -1,0 +1,393 @@
+/* Reset 및 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #808080;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 카드 컨테이너 */
+.card-container {
+    perspective: 1000px;
+}
+
+/* 메인 명함 카드 */
+.business-card {
+    background: #000000;
+    border-radius: 20px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 450px;
+    width: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.business-card::before {
+    display: none;
+}
+
+/* 프로필 섹션 */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #333333;
+}
+
+.profile-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+    background-color: #000000;
+    filter: brightness(1.1) contrast(1.2) invert(1);
+}
+
+.profile-info .name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.profile-info .name .title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.profile-info .position {
+    font-size: 18px;
+    font-weight: 500;
+    color: #cccccc;
+    margin-bottom: 5px;
+}
+
+.profile-info .company {
+    font-size: 14px;
+    color: #cccccc;
+    font-weight: 400;
+}
+
+/* 연락처 섹션 */
+.contact-section {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #333333;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 12px;
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(74, 144, 226, 0.2);
+    transform: translateX(5px);
+}
+
+.contact-item i {
+    width: 25px;
+    color: #ffffff;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.contact-item span {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.contact-item a {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #4a90e2;
+    text-decoration: underline;
+}
+
+/* 소셜 미디어 섹션 */
+.social-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.social-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #000000;
+    color: white;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    background: #333333;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.social-link i {
+    font-size: 24px;
+}
+
+.instagram-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.blog-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.kakao-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* 자기소개 섹션 */
+.bio-section {
+    margin-bottom: 30px;
+}
+
+.bio-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-section p {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 15px;
+    background: rgba(74, 144, 226, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.bio-content {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bio-title {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.bio-description {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 15px;
+    text-align: justify !important;
+    text-align-last: left;
+    word-spacing: 0.1em;
+    margin: 0;
+}
+
+/* 스킬 섹션 */
+.skills-section {
+    margin-bottom: 30px;
+}
+
+.skills-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: linear-gradient(145deg, #4a90e2, #357abd);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 3px 10px rgba(74, 144, 226, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .business-card {
+        padding: 25px;
+        margin: 10px;
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-info .name {
+        font-size: 24px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .skills-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-card {
+        padding: 20px;
+    }
+    
+    .profile-info .name {
+        font-size: 22px;
+    }
+    
+    .contact-item {
+        padding: 10px;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-link i {
+        font-size: 16px;
+    }
+}
+
+/* 인쇄용 스타일 */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .business-card {
+        box-shadow: none;
+        border: 2px solid #ddd;
+        page-break-inside: avoid;
+    }
+    
+    .social-link, .skill-tag {
+        background: #4a90e2 !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+}
+
+/* 애니메이션 효과 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.business-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* 호버 효과를 위한 추가 스타일 */
+.business-card:hover {
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.15),
+        0 12px 30px rgba(0, 0, 0, 0.08);
+} 
